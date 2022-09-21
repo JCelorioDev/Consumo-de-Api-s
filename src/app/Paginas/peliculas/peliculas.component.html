@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor">
+        <span class="badge rounded-pill text-bg-success contenedor-generos" *ngFor="let Item of Generos">{{Item.name}}</span>
+    </div>
+
+    <div style="display: inline-block; margin: 15px 200px" class="buscador">
+        <input type="text" #Dato value="Doraemon" placeholder="Buscar Pelicula...">
+        <button type="button" (click)="getTitleForMovies(Dato)">Buscar</button>
+    </div>
+
+    <div class="card" style="width: 22rem;" *ngFor="let Item of Title">
+        <img src="https://image.tmdb.org/t/p/original/{{Item.poster_path}}" (click)="getDetailsOfMovie(Item.id)" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2>{{Item.title}}</h2>
+            <h2 class="card-body-active">Año de Lanzamiento: {{Item.release_date}}</h2>
+            <p>
+                {{Especifico.overview}}
+            </p>
+            Idiomas:
+            <span *ngFor="let Item of Especifico.spoken_languages">
+                {{Item.english_name}}
+            </span>
+            <br>
+            <span *ngFor="let Item of Especifico.genres" class="badge rounded-pill text-bg-primary">{{Item.name}}</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+    background: url(https://as01.epimg.net/meristation/imagenes/2022/05/30/noticias/1653918527_420509_1654008611_noticia_normal.jpg);
+    height: 625px;
+    opacity: 95%;
+    overflow-x: hidden;
+}
+
+.contenedor{
+    position: relative;
+    top: 300px;
+    left: 550px;
+    display: inline-block;
+}
+
+.btn-danger{
+    margin: 0 10px;
+}

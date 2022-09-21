@@ -1,0 +1,42 @@
+body{
+    background: none;
+}
+
+
+.buscador{
+    position: relative;
+    left: -150px;
+    top: 60px;
+}
+
+.modal-body{
+    position: relative;
+    display: inline-block;
+    left: -200px;
+    top: 250px;
+    width: 800px;
+    text-align: center;
+}
+
+.card{
+    position: relative;
+    top: 65px;
+    left: 15px;
+    margin: 10px 0;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(178, 162, 233) 0%, rgb(243, 50, 50));
+    border: none;
+    font-family: 'Staatliches', cursive;
+    color: rgb(0, 0, 0);
+}
+
+.card img{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.card-body span{
+    color: palegreen;
+    font-size: 30px;
+}

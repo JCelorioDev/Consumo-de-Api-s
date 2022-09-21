@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div style="display: inline-block; margin: 15px 200px" class="buscador">
+        <input type="search" #Dato2 placeholder="Ingresa el Autor">
+        <button type="button" (click)="getDetailsOfAutor(Dato2)">Buscar</button>
+    </div>
+
+    <div class="card" style="width: 22rem;" *ngFor="let Item of Autor">
+        <h2>{{Item.name}}</h2>
+        <img src="https://image.tmdb.org/t/p/original/{{Item.profile_path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <span>Peliculas</span>
+            <div *ngFor="let Item2 of Item.known_for">
+                <h4>{{Item2.title}}</h4>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

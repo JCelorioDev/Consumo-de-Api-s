@@ -1,0 +1,31 @@
+body{
+    background: none;
+}
+
+.contenedor{
+    margin: 7px -500px;
+}
+
+.buscador{
+    position: relative;
+    left: -150px;
+}
+
+.card{
+    margin: 10px 0;
+    text-align: center;
+    background: linear-gradient(90deg, rgb(255, 230, 0) 0%, rgb(255, 0, 191));
+    font-family: 'Fredoka One', cursive;
+}
+
+.card img{
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+}
+
+div .card-body-active{
+    font-size: 18px;
+}
+
+    
